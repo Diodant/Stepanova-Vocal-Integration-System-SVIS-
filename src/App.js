@@ -238,6 +238,30 @@ function SvisMethodContent({ openModule, setOpenModule }) {
         </div>
       </section>
 
+      <section className="svis-price" id="tuition">
+        <div className="svis-price__copy">
+          <span>Обучение · SVIS Academy</span>
+          <h2>Стоимость обучения в академии</h2>
+          <div className="svis-price__value">
+            <strong>45 000</strong>
+            <small>гривен</small>
+          </div>
+          <a href="#contact">Оставить заявку <i>↘</i></a>
+        </div>
+        <div className="svis-price__visual svis-price__keyboard" aria-hidden="true">
+          <div className="svis-price__keys">
+            {Array.from({ length: 10 }, (_, index) => (
+              <i key={index} style={{ "--key-index": index }} />
+            ))}
+            <div className="svis-price__sharps">
+              {[1, 2, 4, 5, 6, 8].map((position) => <b key={position} style={{ "--sharp-position": position }} />)}
+            </div>
+            <span className="svis-price__key-pulse" />
+          </div>
+          <div className="svis-price__keyboard-scale"><span>LOW</span><span>FUNCTIONAL RANGE</span><span>HIGH</span></div>
+        </div>
+      </section>
+
       <section className="svis-section svis-section--major">
         <div className="svis-section__body">
           <h2>Ключевой принцип: функциональный вокальный диапазон</h2>
@@ -841,35 +865,35 @@ function SvisMethodContent({ openModule, setOpenModule }) {
             <p>Отдельным направлением SVIS является подготовка преподавателей, способных самостоятельно применять систему в профессиональной образовательной практике.</p>
             <p>SVIS Teacher Training Program</p>
             <p>Программа включает четыре уровня.</p>
-            <div className="svis-line"><i /><span>Level I — SVIS Foundations</span></div>
+            <div className="svis-line svis-line--criterion"><i /><span>Level I — SVIS Foundations</span></div>
             <p>Изучаются:</p>
             <div className="svis-line"><i /><span>концепция функционального диапазона;</span></div>
             <div className="svis-line"><i /><span>принципы регистровой интеграции;</span></div>
             <div className="svis-line"><i /><span>основы первичной диагностики;</span></div>
             <div className="svis-line"><i /><span>проведение SVIS Vocal Profile Assessment;</span></div>
-            <p>составление SVIS Vocal Range Map.</p>
-            <div className="svis-line"><i /><span>Level II — Register Integration</span></div>
+            <div className="svis-line"><i /><span>составление SVIS Vocal Range Map;</span></div>
+            <div className="svis-line svis-line--criterion"><i /><span>Level II — Register Integration</span></div>
             <p>Изучаются:</p>
             <div className="svis-line"><i /><span>анализ переходных зон;</span></div>
             <div className="svis-line"><i /><span>SVIS Register Bridge Protocol;</span></div>
             <div className="svis-line"><i /><span>регистровая декомпрессия;</span></div>
             <div className="svis-line"><i /><span>адаптация упражнений под индивидуальный голос;</span></div>
-            <p>выявление технических компенсаций.</p>
-            <div className="svis-line"><i /><span>Level III — Controlled Range Expansion</span></div>
+            <div className="svis-line"><i /><span>выявление технических компенсаций;</span></div>
+            <div className="svis-line svis-line--criterion"><i /><span>Level III — Controlled Range Expansion</span></div>
             <p>Изучаются:</p>
             <div className="svis-line"><i /><span>Adjacent Note Acquisition;</span></div>
             <div className="svis-line"><i /><span>SVIS Five-Point Stability Test;</span></div>
             <div className="svis-line"><i /><span>перевод ноты из потенциального в функциональный диапазон;</span></div>
             <div className="svis-line"><i /><span>ведение SVIS Progress Index;</span></div>
-            <p>формирование индивидуального маршрута обучения.</p>
-            <div className="svis-line"><i /><span>Level IV — Professional Application</span></div>
+            <div className="svis-line"><i /><span>формирование индивидуального маршрута обучения;</span></div>
+            <div className="svis-line svis-line--criterion"><i /><span>Level IV — Professional Application</span></div>
             <p>Заключительный уровень включает:</p>
             <div className="svis-line"><i /><span>работу с профессиональными исполнителями;</span></div>
             <div className="svis-line"><i /><span>адаптацию SVIS к различным вокальным стилям;</span></div>
             <div className="svis-line"><i /><span>репертуарную интеграцию;</span></div>
             <div className="svis-line"><i /><span>анализ сложных педагогических случаев;</span></div>
             <div className="svis-line"><i /><span>планирование долгосрочной программы развития;</span></div>
-            <p>практическую аттестацию преподавателя.</p>
+            <div className="svis-line"><i /><span>практическую аттестацию преподавателя;</span></div>
           </div>
         </div>
       </section>
@@ -966,12 +990,12 @@ function App() {
       <nav className="svis-nav">
         <a className="svis-logo" href="#top"><b>SVIS</b><span>Stepanova Vocal Integration System</span></a>
         <div className="svis-nav__links">
-          <a href="#author">Автор</a>
           <a href="#history">История</a>
           <a href="#impact">Влияние</a>
           <a href="#scale">Масштаб</a>
           <a href="#method">Методика</a>
           <a href="#structure">Модули</a>
+          <a href="#tuition">Стоимость</a>
           <a href="#reviews">Отзывы</a>
         </div>
         <a className="svis-nav__cta" href="#contact">Связаться</a>

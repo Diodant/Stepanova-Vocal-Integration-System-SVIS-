@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+Host: svisacademy.com
+Sitemap: https://svisacademy.com/sitemap.xml
